@@ -1,0 +1,218 @@
+:root {
+    /* 亮色主题 */
+    --primary: #6750A4;
+    --on-primary: #FFFFFF;
+    --surface: #FEF7FF;
+    --surface-container: #EADDFF;
+    --outline: #79747E;
+    --background: #FFFFFF;
+    --text: #1D1B20;
+    --link: #B700FF;
+
+    /* 暗色主题 */
+    --primary-dark: #D0BCFF;
+    --on-primary-dark: #381E72;
+    --surface-dark: #1D1B20;
+    --surface-container-dark: #2D2A36;
+    --outline-dark: #938F99;
+    --background-dark: #141218;
+    --text-dark: #E8DEF8;
+    --link-dark: #778000;
+
+    --radius: 16px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 统一过渡效果 */
+body,
+a,
+.app-bar,
+.nav-card,
+.article-card,
+.theme-toggle,
+.toc-link,
+.nav-button {
+    transition: background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', system-ui, sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    --primary: var(--primary-dark);
+    --on-primary: var(--on-primary-dark);
+    --surface: var(--surface-dark);
+    --surface-container: var(--surface-container-dark);
+    --outline: var(--outline-dark);
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --link: var(--link-dark);
+}
+
+/* 链接 */
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 顶部应用栏 */
+.app-bar {
+    background: var(--surface-container);
+    color: var(--text);
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.app-bar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    width: 80%;
+}
+
+.logo-icon {
+    float: left;
+    margin-right: 10px;
+}
+
+.logo-text.text {
+    margin-left: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-button:hover {
+    background: var(--surface-container);
+    transform: translateY(-2px);
+}
+
+/* 主容器 */
+.container {
+    max-width: 1024px;
+    margin: 20px auto 0;
+    padding: 0 24px 0 0px;
+}
+
+/* 固定目录 */
+.nav-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: fixed;
+    left: 24px;
+    top: 100px;
+    width: 260px;
+    border: 1px solid var(--outline);
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+/* 内容区域 */
+.article-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 1px solid var(--outline);
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+        margin-top: 80px;
+    }
+
+    .nav-card {
+        position: static;
+        width: 100%;
+        margin: 20px 0;
+        max-height: none;
+    }
+}
+
+.toc-list {
+    list-style: none;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--outline);
+    margin: 12px 0;
+}
+
+.toc-item {
+    margin: 12px 0;
+    line-height: 1.4;
+}
+
+.toc-link {
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    font-size: 0.95em;
+}
+
+.toc-link:hover,
+.toc-link.active {
+    background: var(--surface-container);
+    color: var(--primary);
+}

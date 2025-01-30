@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeworlds Wiki</title>
+    <link rel="shortcut icon" href="resources/teeworlds/teeworlds.ico">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+</head>
+<body>
+    <header class="app-bar">
+        <div class="app-bar-content">
+            <div class="logo">
+                <img src="resources/teeworlds/teeworlds.ico" alt="Teeworlds wiki" width="64" height="64" class="logo-icon">
+                <h1 class="logo-text">Teeworlds Wiki</h1>
+            </div>
+            <div class="nav-buttons">
+                <h2><a href="index.html" class="nav-button">主页</a></h2>
+            </div>
+        </div>
+    </header>
+    <button class="theme-toggle">🌓</button>
+    <div class="container">
+        <main>
+        <article class="article-card">
+            {0}
+        </article>
+        </main>
+    </div>
+
+    <script>
+    // 主题切换逻辑
+    let isDark = localStorage.getItem('theme') === 'dark' ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
+
+    function applyTheme() {{
+        document.body.classList.toggle('dark-mode', isDark);
+        document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }}
+
+    document.querySelector('.theme-toggle').addEventListener('click', () => {{
+        isDark = !isDark;
+        applyTheme();
+    }});
+
+    // 初始化
+    document.addEventListener('DOMContentLoaded', () => {{
+        applyTheme();
+    }});
+    </script>
+</body>
+</html>
