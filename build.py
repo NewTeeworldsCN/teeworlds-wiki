@@ -18,7 +18,7 @@ def BuildWeb():
         # 转换HTML
         file = open(f"docs/{name}.md")
         md = file.read()
-        md.replace(".md", ".html") # 暂时先这样判断一下（
+        md = md.replace(".md", ".html") # 暂时先这样判断一下（
         html = markdown.markdown(md)
         file.close()
         # 保存

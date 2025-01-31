@@ -75,6 +75,10 @@ img {
     max-height: 100%;
 }
 
+ul li {
+    margin-left: 20px;
+}
+
 /* 顶部应用栏 */
 .app-bar {
     background: var(--surface-container);
