@@ -39,3 +39,5 @@ InfClass有官方的继承分支InfClassR,
 
 ## 角色
 - [科学家](infclass-scientist.md)
+- [士兵](infclass-soldier.md)
+- [工程师](infclass-engineer.md)
