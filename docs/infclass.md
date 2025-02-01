@@ -21,9 +21,7 @@ InfClass有官方的继承分支InfClassR,
 
 也有额外的玩家自制分支，被称为其他版本的感染模式。
 
-<br>
-
-以下是大部分已知的修改版本:
+### 大部分已知的修改版本:
 
 - [InfClassR](https://github.com/infclass/teeworlds-infclassR)(官方感染)
 - [InfClassR 社区服版](https://github.com/TeeworldsCN/teeworlds-infclassR)(由中文社区服成员修改)
@@ -33,9 +31,7 @@ InfClass有官方的继承分支InfClassR,
 - [InfClass Random Event](https://github.com/TeeMidnight/teeworlds-infclassRE)(由甘箨Bamcane基于官方感染修改，添加每局都会有的人类与感染随机事件，与随机出现的全局事件)
 - InfClass Knight版(由Stitch626修改，不开源)
 
-<br>
-
-以及一些相类似的模式:
+### 一些相类似的模式:
 
 - [0.7的InfCroya](https://github.com/yavl/teeworlds-infCroya)(yavl的0.7 Teeworlds重制版感染职业，未完成，加入了毒圈机制)
 - [InfNext](https://github.com/bonobo-craft/ddnet-infclass)(由pure_luck修改，基于DDNet，使用了InfCroya的代码，添加了一些完全不同的新职业)
