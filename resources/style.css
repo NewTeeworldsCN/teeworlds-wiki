@@ -67,6 +67,18 @@ body.dark-mode {
     --code-background: var(--code-background-dark);
 }
 
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    padding-top: 1em;
+    border-bottom: 2px solid var(--text);
+}
+
+h3 {
+    padding-top: 0.75em;
+}
 /* 链接 */
 a {
     text-decoration: none;

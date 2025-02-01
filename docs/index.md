@@ -7,7 +7,6 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。在DDNet中，最多64
 <br>
 <br>
 
-模式列表:
-========
+## 模式列表:
 
 - [感染职业](infclass.md)
