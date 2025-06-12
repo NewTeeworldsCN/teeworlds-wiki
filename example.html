@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="resources/teeworlds/teeworlds.ico">
     <link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
-<body>
+<body class="preload">
     <header class="app-bar">
         <div class="app-bar-content">
             <div class="logo">
@@ -35,9 +35,15 @@
         (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
 
     function applyTheme() {{
-        document.body.classList.toggle('dark-mode', isDark);
-        document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+        }
+        else
+        {
+            document.body.classList.remove("dark-mode");
+        }
+        document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
     }}
 
     document.querySelector('.theme-toggle').addEventListener('click', () => {{
@@ -48,6 +54,9 @@
     // 初始化
     document.addEventListener('DOMContentLoaded', () => {{
         applyTheme();
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 1000); // 这里不知道为什么能解决闪烁问题，但是反正能解决了就加上了
     }});
     </script>
 </body>

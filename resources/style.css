@@ -26,6 +26,14 @@
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* 初始禁用所有过渡效果 */
+body.preload,
+body.preload *,
+body.preload *::before,
+body.preload *::after {
+    transition: none !important;
+}
+
 /* 统一过渡效果 */
 body,
 a,
