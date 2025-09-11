@@ -118,7 +118,7 @@ code {
     background: var(--surface-container);
     color: var(--text);
     padding: 12px 24px;
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow);
