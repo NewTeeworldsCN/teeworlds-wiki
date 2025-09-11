@@ -1,6 +1,6 @@
 Teeworlds-Wiki
 ===
-新中文联合社区的wiki库，python脚本由Bamcane编写。
+新中文联合社区的wiki库。
 html模板与css由xy_cloud提供，Bamcane完善。
 ## 使用说明
 ### 准备工作
