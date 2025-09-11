@@ -42,7 +42,11 @@ a,
 .article-card,
 .theme-toggle,
 .toc-link,
-.nav-button {
+.nav-button 
+.bordered-img 
+.copyleft
+.custom-tooltip
+summary {
     transition: background-color var(--transition),
     color var(--transition),
     border-color var(--transition),
@@ -138,7 +142,9 @@ code {
     margin-right: 10px;
 }
 
-.logo-text.text {
+.logo-text h1 {
+    display: flex;
+    align-items: center;
     margin-left: 10px;
 }
 
@@ -164,7 +170,7 @@ code {
 
 /* 主容器 */
 .container {
-    max-width: 1024px;
+    max-width: 60%;
     margin: 20px auto 0;
     padding: 0 24px 0 0px;
 }
@@ -190,6 +196,21 @@ code {
     padding: 32px;
     margin-bottom: 24px;
     border: 1px solid var(--outline);
+}
+
+.toc-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 1px solid var(--outline);
+
+    width: 15%;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 100;
+    left: 5%;
+    margin: 20px auto 0;
 }
 
 /* 主题切换按钮 */
@@ -224,7 +245,6 @@ code {
 }
 
 .toc-list {
-    list-style: none;
     padding-left: 0.5rem;
     border-left: 2px solid var(--outline);
     margin: 12px 0;
@@ -262,7 +282,7 @@ code {
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    color: grey;
+    color: var(--text);
     font-size: 14px;
     z-index: 1000;
 }
@@ -279,8 +299,8 @@ code {
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%) ;
-    background-color: black;
-    color: white;
+    background-color: var(--text);
+    color: var(--background);
     padding: 5px;
     border-radius: 4px;
     text-align: center;
@@ -291,4 +311,24 @@ code {
 .img-container:hover .custom-tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+blockquote {
+    margin: 1em 0;
+    padding: 0 1em;
+    border-left: 4px solid #ddd; /* 左边引用条 */
+    background-color: var(--surface); /* GitHub 式浅灰背景 */
+    border-radius: 4px;
+    position: relative;
+}
+
+.toc-card a {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--link);
+}
+
+.toc-card ul, .toc-card ol, .toc-card li{
+    list-style: none
 }

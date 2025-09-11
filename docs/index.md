@@ -1,10 +1,14 @@
 ![Teeworlds](resources/teeworlds/gui_logo.png "Teeworlds"){ width="256" height="64"}
 
-Teeworlds是一款免费大型多人在线游戏，适用于Windows, MacOS, Linux等系统。在原版模式中最多16名玩家可以同时游玩，原版模式包括团队死亡竞赛和夺旗，还可以设计自己的地图！
+Teeworlds是一款免费大型多人在线游戏，适用于Windows, MacOS, Linux等系统。在原版模式中最多16名玩家可以同时游玩，原版模式包括(团队)死亡竞赛和夺旗，还可以设计自己的地图！
 
 DDraceNetwork是Teeworlds最庞大，最知名的修改。在DDNet中，最多64名玩家可以同时在地图中进行合作闯关，您可以查看[DDNet Wiki](https://wiki.ddnet.org)获得更多信息！
 
-## 模式列表:
+## 原版模式
 
-- [感染职业](?id=modes/infclass)
-- [战地](?id=modes/battlefield)
+- [夺旗 Capture The Flag](?id=modes/ctf)
+
+## 社区模式
+
+- [感染职业 Infection Class](?id=modes/infclass)
+- [战地 Battlefield](?id=modes/battlefield)
