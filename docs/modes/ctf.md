@@ -19,6 +19,9 @@ CTF模式存在诸多修改变体，
 
 以及一些和其他模式结合的另类变体。
 
+### 战地
+[战地](?id=modes/battlefield)，即**Battlefield**，是CTF模式的特殊变体。
+
 ### 瞬杀
 瞬杀，即**instagib**，是一种特殊的PVP玩法。
 

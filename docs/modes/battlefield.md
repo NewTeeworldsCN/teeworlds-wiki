@@ -1,11 +1,11 @@
 # Battlefield
 > 本文修改自[Ninecloud2077](https://github.com/Ninecloud2077)的[战地模式：从入门到入土](https://ninecloud2077.github.io/Battlefield-Intro/)
 
-Battlefield 是 
+Battlefield 是CTF模式的变体。
 
 ## 基本玩法
 
-夺旗一个100分，占点一个20分，任意一方500分胜利
+夺旗可得100分，占点可得20分。
 
 ### 如何下车？
 
