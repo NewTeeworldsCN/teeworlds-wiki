@@ -1,6 +1,6 @@
-科学家(感染模式)
+科学家
 ==============
-科学家(感染模式)是[Infection Class](?id=infclass)里的人类职业
+科学家是[Infection Class](?id=infclass)里的人类职业
 
 ![科学家](resources/infclass/scientist.png){.bordered-img tooltip="科学家"}
 

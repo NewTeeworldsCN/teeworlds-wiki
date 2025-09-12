@@ -10,6 +10,8 @@
     <script src="https://unpkg.com/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
     <script src="https://unpkg.com/markdown-it-attrs@4.3.1/markdown-it-attrs.browser.js"></script>
     <script src="https://unpkg.com/markdown-it-anchor@9.2.0/dist/markdownItAnchor.umd.js"></script>
+    <script src="https://unpkg.com/markdown-it-sub@2.0.0/dist/markdown-it-sub.min.js"></script>
+    <script src="https://unpkg.com/markdown-it-sup@2.0.0/dist/markdown-it-sup.min.js"></script>
 </head>
 
 <body class="preload">
@@ -79,7 +81,8 @@
                     html: true,
                     linkify: true,
                     typographer: true
-                }).use(markdownItAttrs).use(markdownItAnchor, {
+                }).use(markdownItAttrs).use(markdownitSub)
+                .use(markdownitSup).use(markdownItAnchor, {
                     permalink: false,
                     level: [2, 3],
                     slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\u4e00-\u9fa5\-_]/g, '')
