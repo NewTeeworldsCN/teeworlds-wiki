@@ -39,3 +39,11 @@ InfClass有官方的继承分支InfClassR，
 
 ## 角色
 [![科学家](resources/infclass/scientist.png){.bordered-img tooltip="科学家"}](?id=modes/infclass/scientist)
+
+## 官方分支贡献者
+<details>
+<summary>点我展开</summary>
+<a href="https://github.com/infclass/teeworlds-infclassR/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=infclass/teeworlds-infclassR&max=999&column=20" alt="贡献者" />
+</a>
+</details>

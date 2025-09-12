@@ -24,3 +24,6 @@ html模板与css由xy_cloud提供，Bamcane完善。
 ```⚠️请不要修改成XXX.html⚠️```
 
 然后请将修改提交PR等待审核
+
+## Wiki贡献者
+[![贡献者](https://contrib.rocks/image?repo=NewTeeworldsCN/teeworlds-wiki&max=999&column=20)](https://github.com/NewTeeworldsCN/teeworlds-wiki/graphs/contributors)

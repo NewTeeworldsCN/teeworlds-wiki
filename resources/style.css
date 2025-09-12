@@ -9,6 +9,7 @@
     --text: #1D1B20;
     --link: #065ac9;
     --code-background: #bdbdbd;
+    --background-image-opacity: 100%;
 
     /* 暗色主题 */
     --primary-dark: #D0BCFF;
@@ -51,18 +52,56 @@ h3,
 .custom-tooltip,
 .toc-card,
 .toc-list,
-summary {
+.responsive-text,
+.background-dark,
+.background-light {
     transition: background-color var(--transition),
     color var(--transition),
     border-color var(--transition),
     transform var(--transition);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', system-ui, sans-serif;
+    font-family: 'Noto Sans SC', 'Source Han Sans', '思源黑体';
+}
+
+.background-light {
+    background-image: url("background_light.png");
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-dark {
+    background-image: url("background_dark.png");
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body.dark-mode .background-light {
+    opacity: 0;
+}
+
+body.dark-mode .background-dark {
+    opacity: 1;
 }
 
 body {
@@ -81,20 +120,23 @@ body.dark-mode {
     --background: var(--background-dark);
     --text: var(--text-dark);
     --link: var(--link-dark);
+    --background-image-opacity: 0%;
     --code-background: var(--code-background-dark);
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 250%;
 }
 
 h2 {
-    padding-top: 1em;
+    font-size: 175%;
+    padding-top: 1.5%;
     border-bottom: 2px solid var(--text);
 }
 
 h3 {
-    padding-top: 0.75em;
+    font-size: 125%;
+    padding-top: 1%;
 }
 /* 链接 */
 a {
@@ -177,48 +219,35 @@ code {
 
 /* 主容器 */
 .container {
-    max-width: 60%;
-    margin: 20px auto 0;
-    padding: 0 24px 0 0px;
-}
-
-/* 固定目录 */
-.nav-card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 20px;
-    position: fixed;
-    left: 24px;
-    top: 100px;
-    width: 260px;
-    border: 1px solid var(--outline);
-    max-height: calc(100vh - 140px);
-    overflow-y: auto;
+    max-width: 95%;
+    margin: auto;
 }
 
 /* 内容区域 */
 .article-card {
+    max-width: 80%;;
     background: var(--surface);
     border-radius: var(--radius);
     padding: 32px;
-    margin-bottom: 24px;
+    margin-top: 24px;
     border: 1px solid var(--outline);
     box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    margin-left: 15%;
 }
 
+/* 固定目录 */
 .toc-card {
     background: var(--surface);
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
-    padding: 32px;
+    border-radius: var(--radius);
+    padding: 1.5%;
     margin-bottom: 24px;
     border: 1px solid var(--outline);
 
     width: 15%;
     flex-shrink: 0;
     position: fixed;
-    left: calc(5% + 1px);
-    margin: calc(20px + var(--radius)) auto 0;
+    left: 1%;
+    z-index: 100;
     box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -281,6 +310,7 @@ code {
 }
 
 .bordered-img {
+    margin-top: 1px;
     border: 2px solid var(--text);
 }
 
@@ -333,7 +363,7 @@ blockquote {
 
 .toc-card a {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 125%;
     text-decoration: none;
     color: var(--link);
 }

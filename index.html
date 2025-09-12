@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,15 @@
     <script src="https://unpkg.com/markdown-it-attrs@4.3.1/markdown-it-attrs.browser.js"></script>
     <script src="https://unpkg.com/markdown-it-anchor@9.2.0/dist/markdownItAnchor.umd.js"></script>
 </head>
+
 <body class="preload">
+    <div class="background-dark"></div>
+    <div class="background-light"></div>
     <header class="app-bar">
         <div class="app-bar-content">
             <div class="logo">
-                <img src="resources/teeworlds/teeworlds.ico" alt="Teeworlds wiki" width="48" height="48" class="logo-icon">
+                <img src="resources/teeworlds/teeworlds.ico" alt="Teeworlds wiki" width="48" height="48"
+                    class="logo-icon">
                 <b class="logo-text">Teeworlds Wiki</b>
             </div>
             <div class="nav-buttons">
@@ -24,200 +29,214 @@
         </div>
     </header>
     <button class="theme-toggle">🌓</button>
-    <div class="toc-card" id="toc-list"></div>
     <div class="container">
         <main>
-            <article class="article-card">
+            <div class="toc-card" id="toc-list"></div>
+            <article id="article-card" class="article-card">
                 <div id="markdown-content" class="bordered-background">加载中...</div>
             </article>
             <div class="copyleft">
-                <b> Copyleft 2025 NewTeeworldsCN <a href="https://github.com/NewTeeworldsCN/teeworlds-wiki" target="_blank">Open source on github</a></b>
+                <b> Copyleft 2025 NewTeeworldsCN <a href="https://github.com/NewTeeworldsCN/teeworlds-wiki"
+                        target="_blank">Open source on github</a></b>
             </div>
         </main>
     </div>
 
     <script>
-    // 主题切换逻辑
-    let isDark = localStorage.getItem('theme') === 'dark' ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
+        // 主题切换逻辑
+        let isDark = localStorage.getItem('theme') === 'dark' ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
 
-    function applyTheme() {{
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        if (isDark) {
-            document.body.classList.add('dark-mode');
-        }
-        else
-        {
-            document.body.classList.remove("dark-mode");
-        }
-        document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
-    }}
-
-    document.querySelector('.theme-toggle').addEventListener('click', () => {{
-        isDark = !isDark;
-        applyTheme();
-    }});
-
-    // 初始化
-    document.addEventListener('DOMContentLoaded', () => {{
-        applyTheme();
-        setTimeout(() => {
-            document.body.classList.remove('preload');
-        }, 1000); // 这里不知道为什么能解决闪烁问题，但是反正能解决了就加上了
-
-        const md = markdownit({ html: true,
-            linkify: true,
-            typographer: true}).use(markdownItAttrs).use(markdownItAnchor, {
-            permalink: false,
-            level: [2, 3],
-            slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\u4e00-\u9fa5\-_]/g, '')});
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        var docID = urlParams.get('id');
-
-        const defaultImageRenderer = md.renderer.rules.image;
-
-        md.renderer.rules.image = function (tokens, idx, options, env, self) {
-            const token = tokens[idx];
-            const oldAttrs = token.attrs;
-            const tooltip = token.attrGet('tooltip');
-
-            if (tooltip) {
-                token.attrSet('tooltip', null);
-
-                const imgHtml = defaultImageRenderer(tokens, idx, options, env, self);
-
-                token.attrSet('tooltip', tooltip);
-
-                return `
-                <div class="img-container">
-                    ${imgHtml}
-                    <span class="custom-tooltip">${md.utils.escapeHtml(tooltip)}</span>
-                </div>
-                `;
-            }
-
-            return defaultImageRenderer(tokens, idx, options, env, self);
-        };
-
-        if(docID == null)
-        {
-            docID = "index";
-        }
-        var fetchUrl = `docs/${docID}.md`;
-        if(docID == "README")
-        {
-            fetchUrl = 'README.md'
-        }
-        function generateTOC() {
-            const headings = [];
-            const content = document.getElementById('markdown-content');
-
-            // 提取标题
-            content.querySelectorAll('h2, h3').forEach((h, index) => {
-                if (!h.id) return;
-
-                const level = parseInt(h.tagName[1], 10) - 1;
-                headings.push({
-                level,
-                text: h.textContent,
-                id: h.id,
-                index: index
-                });
-            });
-
-            const tocList = document.getElementById('toc-list');
-            tocList.innerHTML = '';
-            let headingItems = [];
-            let stack = [tocList];   // 存储 ul 栈
-
-            headings.forEach(item => {
-                while (stack.length > item.level) {
-                    stack.pop();
+        function applyTheme() {
+            {
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                if (isDark) {
+                    document.body.classList.add('dark-mode');
                 }
+                else {
+                    document.body.classList.remove("dark-mode");
+                }
+                document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
+            }
+        }
 
-                while (stack.length < item.level) {
-                    const parentLi = headingItems[headingItems.length - 1];
-                    if (!parentLi) {
-                        console.warn('无法创建子菜单：缺少父级标题', h);
-                        break;
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            {
+                isDark = !isDark;
+                applyTheme();
+            }
+        });
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            {
+                applyTheme();
+                setTimeout(() => {
+                    document.body.classList.remove('preload');
+                }, 1000); // 这里不知道为什么能解决闪烁问题，但是反正能解决了就加上了
+
+                const md = markdownit({
+                    html: true,
+                    linkify: true,
+                    typographer: true
+                }).use(markdownItAttrs).use(markdownItAnchor, {
+                    permalink: false,
+                    level: [2, 3],
+                    slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\u4e00-\u9fa5\-_]/g, '')
+                });
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                var docID = urlParams.get('id');
+
+                const defaultImageRenderer = md.renderer.rules.image;
+
+                md.renderer.rules.image = function (tokens, idx, options, env, self) {
+                    const token = tokens[idx];
+                    const oldAttrs = token.attrs;
+                    const tooltip = token.attrGet('tooltip');
+
+                    if (tooltip) {
+                        token.attrSet('tooltip', null);
+
+                        const imgHtml = defaultImageRenderer(tokens, idx, options, env, self);
+
+                        token.attrSet('tooltip', tooltip);
+
+                        return `
+                        <div class="img-container">
+                            ${imgHtml}
+                            <span class="custom-tooltip">${md.utils.escapeHtml(tooltip)}</span>
+                        </div>
+                        `;
                     }
 
-                    const newUl = document.createElement('ul');
-                    parentLi.appendChild(newUl);
+                    return defaultImageRenderer(tokens, idx, options, env, self);
+                };
 
-                    stack.push(newUl);
+                if (docID == null) {
+                    docID = "index";
                 }
-                const next = headings[item.index + 1];
-                const hasChildren = next && next.level > item.level;
+                var fetchUrl = `docs/${docID}.md`;
+                if (docID == "README") {
+                    fetchUrl = 'README.md'
+                }
+                function generateTOC() {
+                    const headings = [];
+                    const content = document.getElementById('markdown-content');
 
-                let container = stack[stack.length - 1];
-                let li = document.createElement('li');
-                let link = document.createElement('a');
-                link.href = `#${item.id}`;
-                link.textContent = item.text;
-                link.style.textDecoration = 'none';
-                const details = document.createElement('details');
-                const summary = document.createElement('summary');
+                    // 提取标题
+                    content.querySelectorAll('h2, h3').forEach((h, index) => {
+                        if (!h.id) return;
 
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const target = document.getElementById(item.id);
-                        window.scrollTo({
-                        top: target.offsetTop - 10,
-                        behavior: 'smooth'
+                        const level = parseInt(h.tagName[1], 10) - 1;
+                        headings.push({
+                            level,
+                            text: h.textContent,
+                            id: h.id,
+                            index: index
+                        });
                     });
-                    if(hasChildren)
-                        details.open = !details.open;
-                });
-                
-                if (hasChildren) {
-                    summary.appendChild(link);
+                    const tocList = document.getElementById('toc-list');
 
-                    details.appendChild(summary);
+                    tocList.innerHTML = '';
+                    let headingItems = [];
+                    let stack = [tocList];
 
-                    const innerUl = document.createElement('ul');
-                    details.appendChild(innerUl);
+                    const expandedState = {};
 
-                    li = document.createElement('li');
-                    li.appendChild(details);
-                    container.appendChild(li);
+                    headings.forEach(item => {
+                        while (stack.length > item.level) {
+                            stack.pop();
+                        }
 
-                    stack.push(innerUl);
-                    container = innerUl;
-                } else {
-                    let option = document.createElement('div');
-                    let header = document.createElement('b');
-                    header.textContent = "• ";
-                    header.style.fontWeight = "none";
-                    option.appendChild(header);
-                    option.appendChild(link)
-                    li.appendChild(option);
-                    container.appendChild(li);
+                        let Error = false;
+                        while (stack.length < item.level) {
+                            const parentLi = headingItems[headingItems.length - 1];
+                            if (!parentLi) {
+                                Error = true;
+                                break;
+                            }
+                            const newUl = document.createElement('ul');
+                            const parentId = parentLi.dataset.id;
+                            if (parentId && !expandedState[parentId]) {
+                                newUl.style.display = 'none';
+                            }
+                            parentLi.appendChild(newUl);
+                            stack.push(newUl);
+                        }
+                        if(Error)
+                            return;
+
+                        if (expandedState[item.id] === undefined) {
+                            expandedState[item.id] = false;
+                        }
+
+                        const next = headings[item.index + 1];
+                        const hasChildren = next && next.level > item.level;
+
+                        const container = stack[stack.length - 1];
+                        const li = document.createElement('li');
+                        const link = document.createElement('a');
+
+                        li.dataset.id = item.id;
+
+                        if (hasChildren) {
+                            link.textContent = expandedState[item.id] ? `▸ ${item.text}` : `▾ ${item.text}`;
+                        } else {
+                            link.textContent = `• ${item.text}`;
+                        }
+
+                        link.href = `#${item.id}`;
+                        link.style.textDecoration = 'none';
+
+                        link.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const target = document.getElementById(item.id);
+                            if (target) {
+                                window.scrollTo({
+                                    top: target.offsetTop - 10,
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            if (hasChildren) {
+                                expandedState[item.id] = !expandedState[item.id];
+
+                                let childUl = li.querySelector(':scope > ul');
+                                if (childUl) {
+                                    childUl.style.display = expandedState[item.id] ? 'block' : 'none';
+                                }
+
+                                link.textContent = expandedState[item.id] ? `▸ ${item.text}` : `▾ ${item.text}`;
+                            }
+                        });
+
+                        li.appendChild(link);
+                        container.appendChild(li);
+                        headingItems.push(li);
+                    });
+                    if(headingItems.length == 0)
+                    {
+                        tocList.style.display = 'none';
+                        document.getElementById('article-card').style.marginLeft = "10%";
+                    }
                 }
 
-                headingItems.push(li);
-            });
-            if (headings.length === 0) {
-                document.getElementById('toc-list').style.display = 'none';
-            } else {
-                document.getElementById('toc-list').style.display = ''; // 恢复默认显示（或 'block'）
+                fetch(fetchUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error("加载失败QAQ?");
+                        return response.text();
+                    })
+                    .then(text => {
+                        document.getElementById("markdown-content").innerHTML = md.render(text);
+                        generateTOC();
+                    })
+                    .catch(err => {
+                        document.getElementById("markdown-content").innerHTML = `<p style="color:red;">错误：${err.message}</p>`;
+                    });
             }
-        }
-
-        fetch(fetchUrl)
-            .then(response => {
-                if (!response.ok) throw new Error("加载失败QAQ?");
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById("markdown-content").innerHTML = md.render(text);
-                generateTOC();
-            })
-            .catch(err => {
-                document.getElementById("markdown-content").innerHTML = `<p style="color:red;">错误：${err.message}</p>`;
-            });
-    }});
+        });
     </script>
 </body>
+
 </html>

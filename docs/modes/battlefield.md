@@ -214,6 +214,6 @@ Battlefield 是CTF模式的变体。
 左键发射慢速的爆炸子弹，长按右键向鼠标方向快速移动
 滑板没有独立的生命值，受伤直接扣除玩家生命
 
-## 武器/载具伤害数据一览
+## 其他
 
-![伤害数据](resources/battlefield/data.jpg){.bordered-img}
+![伤害数据](resources/battlefield/data.jpg){.bordered-img tooltip="伤害数据"}
