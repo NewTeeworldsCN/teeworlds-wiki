@@ -16,6 +16,9 @@ Infection Class，即[InfClass](https://github.com/necropotame/teeworlds-infclas
 
 爆炸结束后幸存的人类将获得加分奖励。如果在援军到来前所有玩家都被感染则感染阵营获胜。
 
+## 角色
+[![科学家](resources/infclass/scientist.png){.bordered-img tooltip="科学家"}](?id=modes/infclass/scientist)
+
 ## 修改版本
 InfClass有官方的继承分支InfClassR，
 
@@ -36,9 +39,6 @@ InfClass有官方的继承分支InfClassR，
 - [0.7的InfCroya](https://github.com/yavl/teeworlds-infCroya)(yavl的0.7 Teeworlds重制版感染职业，未完成，加入了毒圈机制)
 - [InfNext](https://github.com/bonobo-craft/ddnet-infclass)(由pure_luck修改，基于DDNet，使用了InfCroya的代码，添加了一些完全不同的新职业)
 - [InfNext2](https://github.com/Bamcane/Teeworlds-InfNext)(由甘箨Bamcane基于Hide模式修改，支持0.7，废弃)
-
-## 角色
-[![科学家](resources/infclass/scientist.png){.bordered-img tooltip="科学家"}](?id=modes/infclass/scientist)
 
 ## 官方分支贡献者
 <details>
