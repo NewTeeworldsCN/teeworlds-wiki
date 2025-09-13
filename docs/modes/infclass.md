@@ -12,9 +12,9 @@ Infection Class，即[InfClass](https://github.com/necropotame/teeworlds-infclas
 
 人类玩家需要与感染玩家进行对抗。
 
-当时间限制结束，援军将到来，产生波及整个地图的大爆炸，被炸到的感染者将会直接死亡。
+倒计时结束，援军将到来，产生波及整个地图的大爆炸，被炸到的感染者将会直接死亡。
 
-爆炸结束后幸存的人类将获得加分奖励。如果在援军到来前所有玩家都被感染则感染阵营获胜。
+爆炸结束后如果人类幸存将获胜并获得加分奖励。如果在爆炸结算前所有玩家都被感染则感染阵营获胜。
 
 ## 角色
 [![科学家](resources/infclass/scientist.png){.bordered-img tooltip="科学家"}](?id=modes/infclass/scientist)

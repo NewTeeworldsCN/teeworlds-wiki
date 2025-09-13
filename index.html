@@ -125,7 +125,7 @@
                     const content = document.getElementById('markdown-content');
 
                     // 提取标题
-                    content.querySelectorAll('h2, h3').forEach((h, index) => {
+                    content.querySelectorAll('h2, h3, h4').forEach((h, index) => {
                         if (!h.id) return;
 
                         const level = parseInt(h.tagName[1], 10) - 1;

@@ -16,8 +16,13 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 
 ### 社区模式
 
-- [感染职业 Infection Class](?id=modes/infclass)
+#### B
 - [战地 Battlefield](?id=modes/battlefield)
+
+#### I
+
+- [感染 Infection](?id=modes/infection)
+- [感染职业 Infection Class](?id=modes/infclass)
 
 
 ### 贡献者
