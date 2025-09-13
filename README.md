@@ -26,21 +26,22 @@ html模板与css由xy_cloud提供，Bamcane完善。
 然后请将修改提交PR等待审核
 
 ## 协议
+本Wiki采用双重授权模式，以清晰区分内容与代码授权。
+
+### 代码
 本Wiki的以下部分依据[MIT 许可证](https://raw.githubusercontent.com/NewTeeworldsCN/teeworlds-wiki/refs/heads/main/LICENSE)授权：
 
 *   网站前端代码（HTML、CSS、JavaScript）
 *   自定义样式与主题
-*   可复用的脚本与小工具
 
 源代码：[https://github.com/NewTeeworldsCN/teeworlds-wiki](https://github.com/NewTeeworldsCN/teeworlds-wiki)
 
----
+### 内容
 
-本Wiki上的所有用户生成内容，包括但不限于：
-*   文章文本
+本Wiki上的所有用户编辑内容，包括但不限于：
+*   Wiki文档
 *   游戏攻略与指南
-*   上传的兼容图片与媒体（除非另有声明）
-*   页面的 Wiki 标记语言 (WikiText) 源码
+*   上传的图片与媒体（除非另有声明）
 
 均使用 [知识共享 署名-相同方式共享 4.0 国际许可协议 (CC BY-SA 4.0)](https://raw.githubusercontent.com/NewTeeworldsCN/teeworlds-wiki/refs/heads/main/LICENSE_CONTENT) 授权。
 
