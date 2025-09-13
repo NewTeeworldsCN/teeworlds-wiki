@@ -26,7 +26,7 @@
             </div>
             <div class="nav-buttons">
                 <a href="?" class="nav-button">主页</a>
-                <a href="?id=README" class="nav-button">关于</a>
+                <a href="?id=about" class="nav-button">关于</a>
             </div>
         </div>
     </header>
@@ -119,10 +119,7 @@
                 if (docID == null) {
                     docID = "index";
                 }
-                var fetchUrl = `docs/${docID}.md`;
-                if (docID == "README") {
-                    fetchUrl = 'README.md'
-                }
+                const fetchUrl = `docs/${docID}.md`;
                 function generateTOC() {
                     const headings = [];
                     const content = document.getElementById('markdown-content');
