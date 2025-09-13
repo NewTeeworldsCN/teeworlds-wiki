@@ -1,5 +1,5 @@
 # Infection
-Infection, 是Teeworlds感染类模式的起源，由Gravity制作。
+Infection，是Teeworlds感染类模式的起源，由Gravity制作。
 
 ## 模式玩法
 游戏开始时，将会随机选择玩家进行感染。

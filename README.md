@@ -11,7 +11,7 @@ html模板与css由xy_cloud提供，Bamcane完善。
 
 根目录下的resources文件夹里存放着资源文件，
 
-```⚠️如果您不懂得CSS, 请不要修改style.css文件⚠️```
+```⚠️如果您不懂得CSS，请不要修改style.css文件⚠️```
 
 在docs中添加XXX.md以添加页面，
 
