@@ -19,6 +19,10 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 #### B
 - [战地 Battlefield](?id=modes/battlefield)
 
+#### F
+
+- [球类运动 Foot](?id=modes/foot)
+
 #### I
 
 - [感染 Infection](?id=modes/infection)
