@@ -38,6 +38,7 @@ body.preload *::after {
 /* 统一过渡效果 */
 body,
 a,
+b,
 h1,
 h2,
 h3,
@@ -144,6 +145,11 @@ a {
     color: var(--link);
 }
 
+b {
+    text-decoration: none;
+    color: var(--text);
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -181,7 +187,6 @@ code {
 
 .logo {
     position: relative;
-    width: 80%;
 }
 
 .logo-icon {
