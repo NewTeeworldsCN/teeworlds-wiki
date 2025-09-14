@@ -1,11 +1,11 @@
 # Foot
-Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文俗称“球类运动”，是一款由[unique-clan](https://github.com/unique-clan)团队发起的休闲模式。根据其官方自述文档，该项目目前由开发者 **GreYFoX** (又名 Shereef Marzouk) 负责其重构工作。
+Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文名称“球类运动”，是一个最初由开发者 **GreYFoX** (又名 Shereef Marzouk) 发起制作的娱乐模式。该模式衍生出了数个社区分支，其中包括由[unique-clan](https://github.com/unique-clan)团队维护的[版本](https://github.com/unique-clan/football)，以及由中文社区[TeeworldsCN](https://github.com/TeeworldsCN)维护的[另一版本](https://github.com/TeeworldsCN/teeworlds-teefoot)。
 
 
 ## 模式玩法
 玩家分为人数均衡的两队进行对抗。每轮游戏开始一段时间后，场上固定区域会刷新出一个可拾取的**榴弹炮**，它在此模式中将作为**“球”**使用。
 
-![球](resources/foot/ball.jpg){.bordered-img tooltip="球"}
+![球](resources/foot/ball.jpg){tooltip="球"}
 
 玩家触碰后即可拾取球，并可以向任意角度**投出**。
 
@@ -21,15 +21,15 @@ Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文�
 若场上的球长时间无人拾取，它会自行消失，并在一段时间后以榴弹炮的形式再次出现在刷新点。
 
 ### 得分
-**正常得分**
+#### 正常得分
 
 一名玩家将球射入敌方球门时，记一次正常得分。屏幕会显示“XXX scored for red/blue team（XXX玩家为红/蓝队伍得分）”。
 
-**乌龙球**
+#### 乌龙球
 
 一名玩家将球射入己方球门时，记一次乌龙球。屏幕会显示“XXX scored for red/blue team（XXX玩家为红/蓝队伍得分）”。
 
-**助攻得分**
+#### 助攻得分
 
 若进球者的球在短时间内来自于其他玩家的传球，则记一次助攻得分。屏幕会显示“XXX scored for red/blue team with a pass from YYY（XXX玩家因YYY的助攻而为红/蓝队伍得分）”。
 
@@ -82,11 +82,3 @@ Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文�
 
 ## 参数对比
 ![各模式参数对比表](resources/foot/info.jpg){.bordered-img tooltip="各模式参数对比表"}
-
-## 官方分支贡献者
-<details>
-<summary>点我展开</summary>
-<a href="https://github.com/TeeworldsCN/teeworlds-teefoot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=TeeworldsCN/teeworlds-teefoot&max=999&column=20" alt="贡献者" />
-</a>
-</details>
