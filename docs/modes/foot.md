@@ -3,7 +3,7 @@ Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文�
 
 
 ## 模式玩法
-玩家分为人数均衡的两队进行对抗。每轮游戏开始一段时间后，场上固定区域会刷新出一个可拾取的**榴弹炮**，它在此模式中将作为**球**使用。
+玩家分为人数均衡的两队进行对抗。每轮游戏开始一段时间后，场上固定区域会刷新出一个可拾取的**榴弹炮**，它在此模式中将作为**“球”**使用。
 
 ![球](resources/foot/ball.jpg){tooltip="球"}
 
@@ -82,3 +82,11 @@ Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文�
 
 ## 参数对比
 ![各模式参数对比表](resources/foot/info.jpg){.bordered-img tooltip="各模式参数对比表"}
+
+## 官方分支贡献者
+<details>
+<summary>点我展开</summary>
+<a href="https://github.com/TeeworldsCN/teeworlds-teefoot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TeeworldsCN/teeworlds-teefoot&max=999&column=20" alt="贡献者" />
+</a>
+</details>
