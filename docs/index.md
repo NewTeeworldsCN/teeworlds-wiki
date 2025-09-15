@@ -28,6 +28,9 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 - [感染 Infection](?id=modes/infection)
 - [感染职业 Infection Class](?id=modes/infclass)
 
+#### M
+- [怪物狂潮 Monster](?id=modes/monster)
+
 
 ### 贡献者
 <details>
