@@ -42,6 +42,9 @@ b,
 h1,
 h2,
 h3,
+table,
+th,
+td,
 .app-bar,
 .nav-card,
 .article-card,
@@ -164,6 +167,12 @@ code {
     background: var(--code-background);
     padding: 2px;
     border-radius: 5px;
+}
+
+table, th, td
+{
+    border: 1px solid var(--text);
+    padding: 2px;
 }
 
 /* 顶部应用栏 */
