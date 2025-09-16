@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/markdown-it-anchor@9.2.0/dist/markdownItAnchor.umd.js"></script>
     <script src="https://unpkg.com/markdown-it-sub@2.0.0/dist/markdown-it-sub.min.js"></script>
     <script src="https://unpkg.com/markdown-it-sup@2.0.0/dist/markdown-it-sup.min.js"></script>
+    <script src="https://unpkg.com/markdown-it-footnote@4.0.0/dist/markdown-it-footnote.min.js"></script>
 </head>
 
 <body class="preload">
@@ -86,7 +87,7 @@
                     permalink: false,
                     level: [2, 3],
                     slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\u4e00-\u9fa5\-_]/g, '')
-                });
+                }).use(markdownitFootnote);
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
                 var docID = urlParams.get('id');
