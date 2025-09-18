@@ -32,7 +32,7 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 - [怪物狂潮 Monster](?id=modes/monster)
 
 
-### 贡献者
+### Teeworlds贡献者
 <details>
 <summary>点我展开</summary>
 <a href="https://github.com/teeworlds/teeworlds/graphs/contributors">
