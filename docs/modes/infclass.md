@@ -29,8 +29,7 @@ InfClass有官方的继承分支InfClassR，
 - [InfClassR (Dust)](https://github.com/infclass/teeworlds-infclassR)(目前的官方感染·第三代)
 - [InfClassR](https://github.com/yavl/teeworlds-infclassR)(官方感染·第二代)
 - [InfClassR 社区服版](https://github.com/TeeworldsCN/teeworlds-infclassR)(由中文社区服成员修改)
-- [InfClass Challenge Rank](https://github.com/TeeMidNight/teeworlds-infclassCR)(由甘箨Bamcane基于InfClassR社区服版修改)
-- [InfClassCR](https://github.com/TeeMidNight/teeworlds-infclassCR)(基于社区服版修改，初由甘箨Bamcane修改，目前由缟曦接手)
+- [InfClass Challenge Rank](https://github.com/TeeMidNight/teeworlds-infclassCR)(基于社区服版修改，初由甘箨Bamcane修改，目前由缟曦接手)
 - [InfClassCR Extra](https://gitee.com/TeeFFS/teeworlds-infclassCR-Extra)(基于旧版CR修改，最初由甘箨Bamcane修改，后由FFS修改)
 - InfClass Knight(由Stitch626修改，未开源)
 
