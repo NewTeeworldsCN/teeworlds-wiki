@@ -1,6 +1,9 @@
 # Foot
-Foot，即[teefoot(football)](https://github.com/unique-clan/football)，中文名称“球类运动”，是一个最初由开发者 **GreYFoX** (又名 Shereef Marzouk) 发起制作的娱乐模式。该模式衍生出了数个社区分支，其中包括由[unique-clan](https://github.com/unique-clan)团队维护的[版本](https://github.com/unique-clan/football)，以及由中文社区[TeeworldsCN](https://github.com/TeeworldsCN)维护的[另一版本](https://github.com/TeeworldsCN/teeworlds-teefoot)。
+[Foot](https://github.com/Shereef/teeworlds/tree/teefoot)，即TeeFoot，Football，中文俗称“球类运动”，
 
+最初由 **GreYFoX** 发起制作，有数个分支，活跃分支为[由unique-clan维护的版本](https://github.com/unique-clan/football)，
+
+中文社区常见版本为[TeeworldsCN(社区服)维护的版本](https://github.com/TeeworldsCN/teeworlds-teefoot)。
 
 ## 模式玩法
 玩家分为人数均衡的两队进行对抗。每轮游戏开始一段时间后，场上固定区域会刷新出一个可拾取的**榴弹炮**，它在此模式中将作为**球**使用。
