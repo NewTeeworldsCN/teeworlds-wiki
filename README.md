@@ -17,9 +17,9 @@ html模板与css由xy_cloud提供，Bamcane完善。
 
 ```⚠️请确保页面在其他页面中被链接⚠️```
 
-引用资源时请使用相对路径```resources/XXX.xx```
+引用资源时请使用相对路径，例如```resources/foot/ball.jpg```
 
-链接文档请使用相对路径```?id=<文档文件名(不带后缀)>```
+链接文档请使用相对路径例如```?id=modes/ctf```(不带md后缀)
 
 ```⚠️请不要修改成XXX.html⚠️```
 
