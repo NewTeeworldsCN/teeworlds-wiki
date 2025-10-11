@@ -19,6 +19,9 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 #### B
 - [战地 Battlefield](?id=modes/battlefield)
 
+#### D
+- [个人/团队死斗 (Team) Death Match](?id=modes/dm)
+
 #### F
 
 - [球类运动 Foot](?id=modes/foot)
