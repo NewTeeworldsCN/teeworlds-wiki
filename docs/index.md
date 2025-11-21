@@ -12,15 +12,13 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 
 ### 原版模式
 
+- [个人/团队死斗 (Team) Death Match](?id=modes/dm)
 - [夺旗 Capture The Flag](?id=modes/ctf)
 
 ### 社区模式
 
 #### B
 - [战地 Battlefield](?id=modes/battlefield)
-
-#### D
-- [个人/团队死斗 (Team) Death Match](?id=modes/dm)
 
 #### F
 
