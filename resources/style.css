@@ -39,13 +39,17 @@ body.preload *::after {
 body,
 a,
 b,
+p,
 h1,
 h2,
 h3,
+h4,
 hr,
 table,
 th,
 td,
+ul li,
+ol li
 .app-bar,
 .nav-card,
 .article-card,
@@ -130,28 +134,40 @@ body.dark-mode {
 }
 
 h1 {
-    font-size: 250%;
+    font-size: 2.5vw;
 }
 
 h2 {
-    font-size: 175%;
-    padding-top: 1.5%;
+    font-size: 2vw;
+    padding-top: 0.15vw;
     border-bottom: 2px solid var(--text);
 }
 
 h3 {
-    font-size: 125%;
-    padding-top: 1%;
+    font-size: 1.5vw;
+    padding-top: 0.1vw;
+}
+
+h4 {
+    font-size: 1.25vw;
+    padding-top: 0.05vw;
 }
 /* 链接 */
 a {
     text-decoration: none;
     color: var(--link);
+    font-size: 1vw;
+    display: inline-block;
 }
 
-b {
+a:hover {
+    transform: translateY(-2px);
+}
+
+b, p, summary {
     text-decoration: none;
     color: var(--text);
+    font-size: 1vw;
 }
 
 img {
@@ -161,7 +177,8 @@ img {
 }
 
 ul li, ol li{
-    margin-left: 20px;
+    margin-left: 1.25vw;
+    font-size: 1vw;
 }
 
 code {
@@ -211,8 +228,12 @@ hr
 }
 
 .logo-text {
+    display: flex;
     margin: auto;
     margin-left: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
     font-size: 1.5em;
 }
 
@@ -233,11 +254,6 @@ hr
     font-size: 1.5em;
 }
 
-.nav-button:hover {
-    background: var(--surface-container);
-    transform: translateY(-2px);
-}
-
 /* 主容器 */
 .container {
     max-width: 95%;
@@ -250,7 +266,7 @@ hr
     background: var(--surface);
     border-radius: var(--radius);
     padding: 32px;
-    margin-top: 24px;
+    margin-top: 1vw;
     border: 1px solid var(--outline);
     box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
     margin-left: 15%;
@@ -292,7 +308,7 @@ hr
 @media (max-width: 1024px) {
     .container {
         padding: 0 24px;
-        margin-top: 80px;
+        margin-top: 10vw;
     }
 
     .nav-card {
@@ -321,7 +337,7 @@ hr
     padding: 8px 12px;
     border-radius: 6px;
     transition: background 0.2s ease;
-    font-size: 0.95em;
+    font-size: 0.95vw;
 }
 
 .toc-link:hover,
@@ -343,7 +359,7 @@ hr
     text-align: center;
     padding: 10px 0;
     color: var(--text);
-    font-size: 14px;
+    font-size: 0.14vw;
     z-index: 1000;
 }
 
@@ -384,7 +400,7 @@ blockquote {
 
 .toc-card a {
     font-weight: bold;
-    font-size: 125%;
+    font-size: 1.25vw;
     text-decoration: none;
     color: var(--link);
 }
