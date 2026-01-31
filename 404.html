@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeworlds Wiki</title>
+    <link rel="shortcut icon" href="resources/teeworlds/teeworlds.ico">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+    <script src="https://unpkg.com/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <script src="https://unpkg.com/markdown-it-attrs@4.3.1/markdown-it-attrs.browser.js"></script>
+    <script src="https://unpkg.com/markdown-it-anchor@9.2.0/dist/markdownItAnchor.umd.js"></script>
+    <script src="https://unpkg.com/markdown-it-sub@2.0.0/dist/markdown-it-sub.min.js"></script>
+    <script src="https://unpkg.com/markdown-it-sup@2.0.0/dist/markdown-it-sup.min.js"></script>
+    <script src="https://unpkg.com/markdown-it-footnote@4.0.0/dist/markdown-it-footnote.min.js"></script>
+</head>
+
+<body class="preload">
+    <div class="background-dark"></div>
+    <div class="background-light"></div>
+    <header class="app-bar">
+        <div class="app-bar-content">
+            <a href="?" class="logo">
+                <img src="resources/teeworlds/teeworlds.ico" alt="Teeworlds wiki" width="48" height="48"
+                    class="logo-icon">
+                <b class="logo-text">Teeworlds Wiki</b>
+            </a>
+            <div class="nav-buttons">
+                <a href="?" class="nav-button">主页</a>
+                <a href="?id=about" class="nav-button">关于</a>
+            </div>
+        </div>
+    </header>
+    <button class="theme-toggle">🌓</button>
+    <div class="container">
+        <main>
+            <div class="toc-card" id="toc-list"></div>
+            <article id="article-card" class="article-card">
+                <div id="markdown-content" class="bordered-background">404 未找到该资源qwq...</div>
+            </article>
+            <div class="copyleft">
+                <b> Copyleft 2025-2026 NewTeeworldsCN <a href="https://github.com/NewTeeworldsCN/teeworlds-wiki"
+                        target="_blank">Open source on github</a></b>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 主题切换逻辑
+        let isDark = localStorage.getItem('theme') === 'dark' ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
+
+        function applyTheme() {
+            {
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                if (isDark) {
+                    document.body.classList.add('dark-mode');
+                }
+                else {
+                    document.body.classList.remove("dark-mode");
+                }
+                document.querySelector('.theme-toggle').textContent = isDark ? '🌞' : '🌓';
+            }
+        }
+
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            {
+                isDark = !isDark;
+                applyTheme();
+            }
+        });
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            {
+                applyTheme();
+                setTimeout(() => {
+                    document.body.classList.remove('preload');
+                }, 1000); // 这里不知道为什么能解决闪烁问题，但是反正能解决了就加上了
+            }
+        });
+    </script>
+</body>
+
+</html>
