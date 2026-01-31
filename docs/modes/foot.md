@@ -1,7 +1,7 @@
 # Foot
 [Foot](https://github.com/Shereef/teeworlds/tree/teefoot)，即TeeFoot，Football，中文俗称“球类运动”，
 
-最初由 **GreYFoX** 发起制作，有数个分支，活跃分支为[由unique-clan维护的版本](https://github.com/unique-clan/football)，
+最初由 **GreYFoX** 发起制作，有数个分支。
 
 中文社区常见版本为[TeeworldsCN(社区服)维护的版本](https://github.com/TeeworldsCN/teeworlds-teefoot)。
 
