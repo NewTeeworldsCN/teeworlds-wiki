@@ -134,29 +134,29 @@ body.dark-mode {
 }
 
 h1 {
-    font-size: 2vw;
+    font-size: clamp(32px, 2vw, 64px);
 }
 
 h2 {
-    font-size: 1.5vw;
+    font-size: clamp(24px, 1.5vw, 48px);
     padding-top: 0.15vw;
     border-bottom: 2px solid var(--text);
 }
 
 h3 {
-    font-size: 1.25vw;
+    font-size: clamp(20px, 1.25vw, 40px);
     padding-top: 0.1vw;
 }
 
 h4 {
-    font-size: 1vw;
+    font-size: clamp(16px, 1vw, 32px);
     padding-top: 0.05vw;
 }
 /* 链接 */
 a, b, p, summary {
     text-decoration: none;
     color: var(--text);
-    font-size: 0.8vw;
+    font-size: clamp(12px, 0.8vw, 24px);
 }
 
 a {
@@ -176,8 +176,8 @@ img {
 }
 
 ul li, ol li {
-    margin-left: 1.25vw;
-    font-size: 1vw;
+    margin-left: clamp(20px, 1.25vw, 40px);
+    font-size: clamp(16px, 1vw, 32px);
 }
 
 code {
@@ -233,7 +233,7 @@ hr
     text-decoration: none;
     color: var(--text);
     font-weight: bold;
-    font-size: 125%;
+    font-size: clamp(16px, 1vw, 32px);
 }
 
 .nav-buttons {
@@ -250,7 +250,7 @@ hr
     align-items: center;
     gap: 8px;
     font-weight: bold;
-    font-size: 125%;
+    font-size: clamp(16px, 1vw, 32px);
 }
 
 /* 主容器 */
@@ -336,7 +336,7 @@ hr
     padding: 8px 12px;
     border-radius: 6px;
     transition: background 0.2s ease;
-    font-size: 0.9vw;
+    font-size: clamp(16px, 0.9vw, 28px);
 }
 
 .toc-link:hover,
@@ -399,7 +399,7 @@ blockquote {
 
 .toc-card a {
     font-weight: bold;
-    font-size: 1vw;
+    font-size: clamp(16px, 1vw, 32px);
     text-decoration: none;
     color: var(--link);
 }
