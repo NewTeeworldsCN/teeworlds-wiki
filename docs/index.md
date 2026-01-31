@@ -1,4 +1,4 @@
-[![Teeworlds](resources/teeworlds/gui_logo.png "Teeworlds"){ width="256" height="64"}](https://teeworlds.com)
+[![Teeworlds](resources/teeworlds/gui_logo.png "Teeworlds"){ width="50%" height="50%"}](https://teeworlds.com)
 
 Teeworlds是一款开源在 [zlib协议](https://github.com/teeworlds/teeworlds/blob/master/license.txt) 下的免费大型多人在线游戏，适用于Windows，MacOS，Linux等系统。
 

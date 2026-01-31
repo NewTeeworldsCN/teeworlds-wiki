@@ -134,41 +134,40 @@ body.dark-mode {
 }
 
 h1 {
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 h2 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding-top: 0.15vw;
     border-bottom: 2px solid var(--text);
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     padding-top: 0.1vw;
 }
 
 h4 {
-    font-size: 1.25vw;
+    font-size: 1vw;
     padding-top: 0.05vw;
 }
 /* 链接 */
-a {
+a, b, p, summary {
     text-decoration: none;
-    color: var(--link);
-    font-size: 1vw;
+    color: var(--text);
+    font-size: 0.8vw;
+}
+
+a {
     display: inline-block;
+    color: var(--link);
 }
 
 a:hover {
     transform: translateY(-2px);
 }
 
-b, p, summary {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1vw;
-}
 
 img {
     max-width: 100%;
@@ -176,7 +175,7 @@ img {
     align-items: center;
 }
 
-ul li, ol li{
+ul li, ol li {
     margin-left: 1.25vw;
     font-size: 1vw;
 }
@@ -234,7 +233,7 @@ hr
     text-decoration: none;
     color: var(--text);
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 125%;
 }
 
 .nav-buttons {
@@ -251,7 +250,7 @@ hr
     align-items: center;
     gap: 8px;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 125%;
 }
 
 /* 主容器 */
@@ -337,7 +336,7 @@ hr
     padding: 8px 12px;
     border-radius: 6px;
     transition: background 0.2s ease;
-    font-size: 0.95vw;
+    font-size: 0.9vw;
 }
 
 .toc-link:hover,
@@ -400,7 +399,7 @@ blockquote {
 
 .toc-card a {
     font-weight: bold;
-    font-size: 1.25vw;
+    font-size: 1vw;
     text-decoration: none;
     color: var(--link);
 }
