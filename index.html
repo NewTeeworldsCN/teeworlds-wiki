@@ -117,8 +117,11 @@
                     return defaultImageRenderer(tokens, idx, options, env, self);
                 };
 
+                const tocList = document.getElementById('toc-list');
                 if (docID == null) {
                     docID = "index";
+                    tocList.style.display = 'none';
+                    document.getElementById('article-card').style.marginLeft = "10%";
                 }
                 const fetchUrl = `docs/${docID}.md`;
                 function generateTOC() {
@@ -137,7 +140,6 @@
                             index: index
                         });
                     });
-                    const tocList = document.getElementById('toc-list');
 
                     tocList.innerHTML = '';
                     let headingItems = [];
