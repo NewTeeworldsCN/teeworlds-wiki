@@ -1,5 +1,5 @@
 # LMS 与 LTS
-LMS 与 LTS 是 Teeworlds0.7开始内置的原版模式之一。
+LMS 与 LTS 是 Teeworlds0.7开始内置的原版模式之一，全称分别为**Last Man Standing**与**Last Team Standing**
 
 ## 玩法
 在这类生存模式下，所有玩家每回合都只有一条命。

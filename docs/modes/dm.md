@@ -1,5 +1,5 @@
 # DM 与 TDM
-DM 与 TDM 是 Teeworlds中内置的原版模式之一。
+DM 与 TDM 是 Teeworlds中内置的原版模式之一，全称分别为**Death Match**和**Team Death Match**
 
 ## 玩法
 在DM模式中，玩家各自为战，靠击杀他人得分。

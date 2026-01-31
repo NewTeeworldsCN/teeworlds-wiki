@@ -153,7 +153,7 @@ h4 {
     padding-top: 0.05vw;
 }
 /* 链接 */
-a, b, p, summary {
+a, b, p, summary, th, td {
     text-decoration: none;
     color: var(--text);
     font-size: clamp(12px, 0.8vw, 24px);
@@ -176,7 +176,7 @@ img {
 }
 
 ul li, ol li {
-    margin-left: clamp(20px, 1.25vw, 40px);
+    margin-left: clamp(8px, 1.25vw, 40px);
     font-size: clamp(16px, 1vw, 32px);
 }
 
@@ -275,8 +275,8 @@ hr
 .toc-card {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 1.5%;
-    margin-bottom: 24px;
+    padding: 1%;
+    margin-bottom: 1vw;
     border: 1px solid var(--outline);
 
     width: 15%;
@@ -316,12 +316,6 @@ hr
         margin: 20px 0;
         max-height: none;
     }
-}
-
-.toc-list {
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--outline);
-    margin: 12px 0;
 }
 
 .toc-item {
@@ -399,7 +393,7 @@ blockquote {
 
 .toc-card a {
     font-weight: bold;
-    font-size: clamp(16px, 1vw, 32px);
+    font-size: clamp(10px, 1vw, 32px);
     text-decoration: none;
     color: var(--link);
 }

@@ -1,5 +1,5 @@
 # Capture The Flag
-CTF 是 Teeworlds中内置的原版模式之一。
+CTF 是 Teeworlds中内置的原版模式之一，全称为**Capture The Flag**
 
 ## 玩法
 在CTF模式中，玩家被分为红蓝两队
