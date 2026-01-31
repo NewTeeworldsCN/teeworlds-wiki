@@ -228,7 +228,13 @@
                 fetch(fetchUrl)
                     .then(response => {
                         if (!response.ok) throw new Error("加载失败QAQ?");
-                        return response.text();
+                        const contentType = response.headers.get('content-type');
+                        if (contentType && contentType.includes('text/markdown')) {
+                            return response.text();
+                        }
+                        else {
+                            throw new Error("404 未找到该资源qwq...");
+                        }
                     })
                     .then(text => {
                         document.getElementById("markdown-content").innerHTML = md.render(text);
