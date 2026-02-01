@@ -178,7 +178,7 @@ img {
 
 ul li, ol li {
     margin-left: clamp(8px, 1.25vw, 40px);
-    font-size: clamp(16px, 1vw, 32px);
+    font-size: clamp(12px, 0.8vw, 24px);
 }
 
 code {
