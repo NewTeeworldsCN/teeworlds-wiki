@@ -10,6 +10,15 @@ DDraceNetwork是Teeworlds最庞大，最知名的修改。
 
 您可以访问 [Teeworlds Github](https://github.com/teeworlds/teeworlds) 获取源代码 或访问 [Teeworlds官网](https://teeworlds.com) 获取二进制文件。
 
+或是在Steam上下载Teeworlds或DDNet:
+<iframe src="https://store.steampowered.com/widget/380840/" frameborder="0" width="646" height="190"></iframe>
+<iframe src="https://store.steampowered.com/widget/412220/" frameborder="0" width="646" height="190"></iframe>
+
+### Teeworlds: Archive
+Teeworlds: Archive是由中文社区联合体主导的Teeworlds项目，项目以扩展修改为中心，并继承Teeworlds的代码风格，你可以在Steam上下载并体验它：
+<iframe src="https://store.steampowered.com/widget/4640030/" frameborder="0" width="646" height="190"></iframe>
+或是访问 [Teeworlds: Archive官网](https://archive.teeworlds.wiki) 获得更多信息！
+
 ### 原版模式
 
 - [夺旗 Capture The Flag](?id=modes/ctf)
